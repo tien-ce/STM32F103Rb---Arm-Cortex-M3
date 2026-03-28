@@ -1,0 +1,11 @@
+# STM32CubeIDE
+# Build artifacts
+Debug/
+Release/
+Startup/
+Includes/
+.settings/
+*.launch
+*.ld
+*.project
+*.cproject
