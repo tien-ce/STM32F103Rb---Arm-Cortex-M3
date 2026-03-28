@@ -9,3 +9,4 @@ Includes/
 *.ld
 *.project
 *.cproject
+*.metadata/
