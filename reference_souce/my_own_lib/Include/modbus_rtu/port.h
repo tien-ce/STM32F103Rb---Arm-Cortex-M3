@@ -11,6 +11,7 @@
 #include <assert.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <string.h>
 #include "stm32f1xx.h"
 
 #define INLINE                      inline
@@ -22,14 +23,14 @@
 #define EXIT_CRITICAL_SECTION()     __enable_irq()
 
 
-typedef uint8_t         BOOL;
+typedef bool         BOOL;
 typedef unsigned char   UCHAR;
 typedef char            CHAR;
 typedef uint16_t        USHORT;
 typedef int16_t         SHORT;
 typedef uint32_t        ULONG;
 typedef int32_t         LONG;
-
+typedef uint8_t			UINT8;
 #ifndef TRUE
 #define TRUE            1
 #endif
@@ -38,5 +39,11 @@ typedef int32_t         LONG;
 #define FALSE           0
 #endif
 
+/* Port function */
+static inline UINT8 uiPortMemcpy(UCHAR *des, const UCHAR *src, UINT8 length)
+{
+	memcpy(des,src,length);
+	return length;
+}
 
 #endif /* PORT_PORT_H_ */

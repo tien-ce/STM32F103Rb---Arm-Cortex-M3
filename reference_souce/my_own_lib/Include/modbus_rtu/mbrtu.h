@@ -39,7 +39,7 @@ eMBErrorCode eMBRTUInit(UCHAR ucPort, ULONG ulBaudRate,
 void            eMBRTUStart( void );
 void            eMBRTUStop( void );
 eMBErrorCode    eMBRTUReceive( UCHAR * pucRcvAddress, UCHAR ** pucFrame, USHORT * pusLength );
-eMBErrorCode    eMBRTUSend(const UCHAR * pucFrame, USHORT usLength );
+eMBErrorCode 	eMBRTUSend( UCHAR ucSlaveAddress, const UCHAR * pucFrame, USHORT usLength );
 BOOL            xMBRTUReceiveFSM( void );
 BOOL            xMBRTUTransmitFSM( void );
 BOOL            xMBRTUTimerT15Expired( void );

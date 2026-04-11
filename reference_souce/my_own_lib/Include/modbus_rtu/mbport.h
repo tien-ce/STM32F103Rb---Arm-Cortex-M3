@@ -114,16 +114,8 @@ extern          BOOL( *pxMBFrameCBTransmitterEmpty ) ( void );
 
 extern          BOOL( *pxMBPortCBTimerExpired ) ( void );
 
-/* ----------------------- TCP port functions -------------------------------*/
-BOOL            xMBTCPPortInit( USHORT usTCPPort );
 
-void            vMBTCPPortClose( void );
 
-void            vMBTCPPortDisable( void );
-
-BOOL            xMBTCPPortGetRequest( UCHAR **ppucMBTCPFrame, USHORT * usTCPLength );
-
-BOOL            xMBTCPPortSendResponse( const UCHAR *pucMBTCPFrame, USHORT usTCPLength );
 
 #ifdef __cplusplus
 PR_END_EXTERN_C
